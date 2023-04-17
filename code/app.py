@@ -2,7 +2,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import pandas as pd
-import openpyxl
 import matplotlib.pyplot as plt
 import joblib
 #------------------#
