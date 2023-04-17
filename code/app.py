@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 import joblib
 import os
 #------------------#
-path = r'..\src'
-model_path = r'..\model'
-model_filename = r'\model.sav'
+path = r'/app/catref/src'
+model_path = r'/app/catref/model'
+model_filename = r'/model.sav'
 #---------------------------------#
 try:
-    rf = joblib.load(r'/app/catref/code/model.sav')
+    rf = joblib.load(model_path+model_filename)
 except:
     st.write(os.getcwd())
 #im = Image.open(path+'\catalytic-reformer.jpg')
