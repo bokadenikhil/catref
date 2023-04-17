@@ -14,6 +14,7 @@ rf = joblib.load(model_filename)
 os.chdir('..')
 os.chdir('src')
 im = Image.open(image_file)
+os.chdir('..')
 with st.sidebar:
     st.markdown('Catalytic Reformer')
     st.image(im,width=300)
