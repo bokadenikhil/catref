@@ -9,7 +9,10 @@ path = r'..\src'
 model_path = r'..\model'
 model_filename = r'\model.sav'
 #---------------------------------#
-rf = joblib.load(r'/app/catref/code/model.sav')
+try:
+    rf = joblib.load(r'/app/catref/code/model.sav')
+except:
+    pass
 im = Image.open(path+'\catalytic-reformer.jpg')
 with st.sidebar:
     st.markdown('#Catalytic Reformer')
