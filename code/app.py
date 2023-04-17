@@ -4,14 +4,13 @@ from PIL import Image
 import pandas as pd
 import openpyxl
 import matplotlib.pyplot as plt
-import pickle
+import joblib
 #------------------#
 path = r'..\src'
 model_path = r'..\model'
 model_filename = r'\model.pkl'
 #---------------------------------#
-with open(model_path+model_filename,'rb') as file:
-    rf = pickle.load(file)
+rf = joblib.load(r'/app/catref/model/model.sav')
 im = Image.open(path+'\catalytic-reformer.jpg')
 with st.sidebar:
     st.markdown('#Catalytic Reformer')
