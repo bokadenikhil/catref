@@ -7,18 +7,16 @@ import joblib
 import os
 #------------------#
 current_path = os.getcwd()
-st.write(os.listdir())
-#path = r'/app/catref/src'
-#model_path = r'/app/catref/model'
-#model_filename = r'/model.sav'
+code_path = r'\code'
+model_path = r'\model'
+model_filename = r'\model.sav'
+src_path = r'\src'
+image_file = r'\catalytic-reformer.jpg'
 #---------------------------------#
-#try:
- #   rf = joblib.load(model_path+model_filename)
-#except:
- #   st.write(os.getcwd())
-#im = Image.open(path+'\catalytic-reformer.jpg')
+rf = joblib.load(current_path+model_path+model_filename)
+im = Image.open(current_path+src_path+image_file)
 with st.sidebar:
     st.markdown('Catalytic Reformer')
-   # st.image(im,width=300)
+    st.image(im,width=300)
     start = st.date_input('Start Date')
     end = st.date_input('End Date')
