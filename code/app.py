@@ -13,10 +13,10 @@ model_filename = r'\model.sav'
 src_path = r'\src'
 image_file = r'\catalytic-reformer.jpg'
 #---------------------------------#
-os.chdir(model_path)
+os.chdir('model')
 rf = joblib.load(model_filename)
 os.chdir('..')
-os.chdir(src_path)
+os.chdir('src')
 im = Image.open(os.path.join(current_path,src_path,image_file))
 with st.sidebar:
     st.markdown('Catalytic Reformer')
