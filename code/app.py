@@ -9,7 +9,7 @@ import os
 current_path = os.getcwd()
 code_path = r'\code'
 model_path = r'\model'
-model_filename = r'\model.sav'
+model_filename = 'model.sav'
 src_path = r'\src'
 image_file = r'\catalytic-reformer.jpg'
 #---------------------------------#
