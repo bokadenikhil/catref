@@ -6,18 +6,14 @@ import matplotlib.pyplot as plt
 import joblib
 import os
 #------------------#
-current_path = os.getcwd()
-code_path = r'\code'
-model_path = r'\model'
 model_filename = 'model.sav'
-src_path = r'\src'
-image_file = r'\catalytic-reformer.jpg'
+image_file = 'catalytic-reformer.jpg'
 #---------------------------------#
 os.chdir('model')
 rf = joblib.load(model_filename)
 os.chdir('..')
 os.chdir('src')
-im = Image.open(os.path.join(current_path,src_path,image_file))
+im = Image.open(image_file)
 with st.sidebar:
     st.markdown('Catalytic Reformer')
     st.image(im,width=300)
