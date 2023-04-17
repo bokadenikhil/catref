@@ -15,7 +15,7 @@ image_file = r'\catalytic-reformer.jpg'
 #---------------------------------#
 os.chdir(model_path)
 rf = joblib.load(model_filename)
-os.chdir(..)
+os.chdir('..')
 os.chdir(src_path)
 im = Image.open(os.path.join(current_path,src_path,image_file))
 with st.sidebar:
