@@ -4,6 +4,7 @@ from PIL import Image
 import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
+import os
 #------------------#
 path = r'..\src'
 model_path = r'..\model'
@@ -12,8 +13,8 @@ model_filename = r'\model.sav'
 try:
     rf = joblib.load(r'/app/catref/code/model.sav')
 except:
-    pass
-im = Image.open(path+'\catalytic-reformer.jpg')
+    st.write(os.getcwd())
+#im = Image.open(path+'\catalytic-reformer.jpg')
 with st.sidebar:
     st.markdown('#Catalytic Reformer')
     st.image(im,width=300)
