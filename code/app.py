@@ -1,6 +1,5 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-from streamlit_extras.app_logo import add_logo
 from PIL import Image
 import pandas as pd
 import openpyxl
