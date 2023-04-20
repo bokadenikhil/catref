@@ -15,9 +15,10 @@ install_and_import('pyodbc')
 #------------------#
 #path = os.getcwd()
 #path = /app/catref
-os.chdir(src)
+path = r'/app/catref/src'
+
 #---------------------------------#
-im = Image.open('catalytic-reformer.jpg')
+im = Image.open(path+'/catalytic-reformer.jpg')
 with st.sidebar:
     st.header('Catalytic Reformer')
     st.image(im,width=300)
