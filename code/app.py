@@ -12,6 +12,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 install_and_import('pyodbc') 
+st.text(pyodbc)
 #------------------#
 #path = os.getcwd()
 #path = /app/catref
