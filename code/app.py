@@ -12,7 +12,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 install_and_import('pyodbc') 
 #------------------#
-path = r'app\catref\src'
+path = os.getcwd()
+st.text(path)
+for file in os.listdir():
+    st.text(file)
+if 'catref' in os.listdir():
+    os.chdir('catref')
+elif 'src' in os.list():
+    os.chdir(src)
+r'app\catref\src'
 #model_path = r'..\model'
 #model_filename = r'\model.pkl'
 #---------------------------------#
