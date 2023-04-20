@@ -26,7 +26,7 @@ with st.sidebar:
     end = st.date_input('End Date')
     st.text_input('Enter the days')
 
-cnxn = pyodbc.connect(f'DRIVER={st.secrets.db_credential.DRIVER};SERVER={st.secrets.db_credential.SERVER};Database={st.secrets.db_credential.Database};Port={st.secrets.db_credential.Port};UID={st.secrets.db_credential.UID};PWD={st.secrets.db_credential.PWD}')
+cnxn = pyodbc.connect(DRIVER=st.secrets.db_credential.DRIVER,SERVER=st.secrets.db_credential.SERVER,Database=st.secrets.db_credential.Database,Port=st.secrets.db_credential.Port,UID=st.secrets.db_credential.UID,PWD=st.secrets.db_credential.PWD)
 cursor = cnxn.cursor()
 
 cursor.execute("SELECT _VALUE FROM [Equipment-1-TABLE-6] where _NAME = 'demo.equipment-1.FEED FLOW VOLUME'")
