@@ -12,9 +12,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 install_and_import('pyodbc') 
 #------------------#
-path = r'..\src'
-model_path = r'..\model'
-model_filename = r'\model.pkl'
+path = r'app\catref\src'
+#model_path = r'..\model'
+#model_filename = r'\model.pkl'
 #---------------------------------#
 im = Image.open(path+'\catalytic-reformer.jpg')
 with st.sidebar:
