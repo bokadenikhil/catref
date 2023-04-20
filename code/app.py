@@ -13,19 +13,11 @@ import os
 import matplotlib.pyplot as plt
 install_and_import('pyodbc') 
 #------------------#
-path = os.getcwd()
-st.text(path)
-for file in os.listdir():
-    st.text(file)
-if 'catref' in os.listdir():
-    os.chdir('catref')
-elif 'src' in os.list():
-    os.chdir(src)
-r'app\catref\src'
-#model_path = r'..\model'
-#model_filename = r'\model.pkl'
+#path = os.getcwd()
+#path = /app/catref
+os.chdir(src)
 #---------------------------------#
-im = Image.open(path+'\catalytic-reformer.jpg')
+im = Image.open('catalytic-reformer.jpg')
 with st.sidebar:
     st.header('Catalytic Reformer')
     st.image(im,width=300)
