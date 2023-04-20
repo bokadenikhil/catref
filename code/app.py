@@ -1,9 +1,16 @@
+def install_and_import(package):
+    import importlib
+    try:
+        importlib.import_module(package)
+    except ImportError:
+        import pip
+        pip.main(['Install',package])
 import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import pandas as pd
 import matplotlib.pyplot as plt
-import pyodbc 
+install_and_import('pyodbc') 
 #------------------#
 path = r'..\src'
 model_path = r'..\model'
